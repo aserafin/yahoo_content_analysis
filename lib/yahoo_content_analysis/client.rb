@@ -41,7 +41,7 @@ module YahooContentAnalysis
     end
 
     def query(content)
-      "SELECT * FROM contentanalysis.analyze WHERE related_entities = 'true' and #{condition(content)}"
+      "SELECT * FROM contentanalysis.analyze WHERE #{condition(content)}"
     end
 
     def condition(content)
